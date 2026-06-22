@@ -9,7 +9,7 @@ from transformers import ViTModel
 import torch.nn as nn
 
 # Cấu hình giao diện Streamlit
-st.set_page_config(page_title="Hệ thống nhận diện Logo", page_icon="🔍", layout="centered")
+st.set_page_config(page_title="Ung dung tim kiem logo trung lap Doanh nghiep", page_icon="🔍", layout="centered")
 
 class ViTEncoder(nn.Module):
     def __init__(self, model_name='google/vit-base-patch16-224'):
@@ -59,8 +59,8 @@ except Exception as e:
     st.stop()
 
 # Xây dựng giao diện chính
-st.title("🔍 Truy Xuất Logo (ViT + FAISS)")
-st.markdown("Hệ thống nhận diện logo sử dụng **Vision Transformer** và tìm kiếm vector bằng **FAISS**.")
+st.title("🔍 Ung dung tim kiem logo trung lap Doanh nghiep (ViT + Seamese Network)")
+st.markdown("Hệ thống nhận diện logo sử dụng **Vision Transformer** và **Seamese Network**.")
 
 uploaded_file = st.file_uploader("Kéo thả ảnh hoặc click để tải lên", type=["jpg", "jpeg", "png"])
 
